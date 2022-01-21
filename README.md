@@ -18,6 +18,6 @@
 
 ### 项目 demo
 
-** v0.0.1 版本 demo **
+**v0.0.1 版本 demo**
 
-![demo-v0.0.1](./public/readme/demo.png)
+<img src="./public/readme/demo.png" width="150" align="left" />
