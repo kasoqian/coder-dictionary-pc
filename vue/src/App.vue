@@ -17,6 +17,7 @@
             : 'red'
         "
         type="text"
+        v-model="wordInput"
         @input="confirmword"
       />
       <div>
@@ -36,6 +37,9 @@
         controls="controls"
         autoplay
       ></audio>
+    </div>
+    <div id="notice">
+      <span> * 使用上下左右键即可切换单词 </span>
     </div>
   </div>
 </template>
@@ -84,9 +88,14 @@ export default {
     },
     async confirmword(e) {
       this.wordconfirm = e.target.value;
-      if (this.wordList[index].word == this.wordconfirm) {
-        let that = this;
-        setTimeout(() => that.randomIndex(), 2000);
+
+      if (
+        this.wordList[this.index].word == this.wordconfirm
+      ) {
+        setTimeout(() => {
+          this.randomIndex();
+          this.wordInput = "";
+        }, 2000);
       }
     },
     backWord() {
@@ -139,5 +148,14 @@ body {
 }
 .red {
   color: grey;
+}
+#notice {
+  position: absolute;
+  bottom: 30px;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.3);
 }
 </style>
