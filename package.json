@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "coder-dictionary-pc",
+  "version": "0.0.1",
+  "description": "",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -11,12 +11,13 @@
     "app:dist": "electron-builder"
   },
   "build": {
-    "appId": "your.id",
+    "appId": "coder dictionary-pc",
     "mac": {
-      "category": "your.app.category.type"
+      "category": "intel",
+      "icon": "./public/bugoo.png"
     }
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/kasoqian/coder-dictionary-pc",
   "keywords": [
     "Electron",
     "quick",
@@ -24,8 +25,7 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "kasoqian@mugenart.io",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
     "electron": "^16.0.7",
